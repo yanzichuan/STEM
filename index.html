@@ -149,23 +149,6 @@
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <img id="teaser" src="./static/images/bb.svg" alt="Teaser SVG Image" height="100%">
-        </div>
-        <h2 class="subtitle has-text-centered">
-        <span class="dnerf">The STEM-DFER framework is divided into two stages:
-          dual-branch reconstruction self-supervised pretraining (Stage 1) 
-          and joint expression dynamic expert module fine-tuning (Stage 2). 
-      </h2>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -179,9 +162,11 @@
             It reduces spatiotemporal redundancy via dual-branch reconstruction and improves generalization with 
             a lightweight expert module that updates only task-relevant parameters. 
           </p>
-          During pretraining, STEM‑DFER employs a dual‑branch reconstruction task with a high masking ratio: a 
-          spatial branch restores local detail, and a temporal branch captures motion dynamics, thereby reducing
-          spatiotemporal redundancy and strengthening sequence modeling. 
+           <p>
+            During pretraining, STEM‑DFER employs a dual‑branch reconstruction task with a high masking ratio: a 
+            spatial branch restores local detail, and a temporal branch captures motion dynamics, thereby reducing
+            spatiotemporal redundancy and strengthening sequence modeling. 
+            </p>
            <p>
              In fine‑tuning, we integrate the Dynamic Expression Expert Module (DEEM), which uses a learnable gating
              mechanism to activate a small subset of expert subnetworks, updating only task‑relevant parameters. This
@@ -193,13 +178,24 @@
             that STEM‑DFER not only enhances DFER performance and robustness but also provides a versatile paradigm for spatiotemporal
             feature learning. Our code is available at <a href="https://github.com/yanzichuan/STEM-DFER">STEM-DFER </a>. 
           </p>
-          <p>
-          </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="publication-video">
+          <img id="teaser" src="./static/images/bb.svg" alt="Teaser SVG Image" height="100%">
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+  
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -218,7 +214,7 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
+        <div class="is-bold">
           <img id="teaser" src="./static/images/cc.svg" alt="Teaser SVG Image" height="100%">
         </div>
         <h2 class="subtitle has-text-centered">
@@ -284,11 +280,21 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
-          <img id="teaser" src="./static/images/ff.svg" alt="Teaser SVG Image" height="100%">
+          <img id="teaser" src="./static/images/rec.png" alt="Teaser SVG Image" height="100%">
         </div>
         <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Embedding space visualization using t-SNE.
-      </h2>
+        <span class="dnerf">Dual-branch frame reconstruction results,Reconstruction results of a
+          YouTubeFace test video under masking ratios of 0.9. We only show 16 frames.
+        </h2>
+
+        <div class="item item-steve">
+          <img id="teaser" src="./static/images/9.png" alt="Teaser SVG Image" height="100%">
+        </div>
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Visualizations of the benchmark model (second row) and the STEM-DFER model
+          (third row) across six emotion categories (from left to right, top to bottom: Happiness,
+          Neutral, Sadness, Anger, Surprise, Fear).
+        </h2>
       </div>
     </div>
   </div>
@@ -384,36 +390,16 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/images/99.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
           </div>
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
+            <img src="./static/images/100.png"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
           </div>
         </div>
         <br/>
