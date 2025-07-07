@@ -149,7 +149,20 @@
 </section>
 
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" src="./static/images/bb.svg" alt="Teaser SVG Image" height="100%">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Overview of the proposed STEM-DFER framework, 
+          which consists of two stages: the self-supervised pretraining stage 
+          (a) and the downstream task fine-tuning stage (b).
+      </h2>
+    </div>
+  </div>
+</section>
 
+  
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -185,18 +198,6 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-         <div class="hero-body">
-          <img id="teaser" src="./static/images/bb.svg" alt="Teaser SVG Image" height="100%">
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-  
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="columns is-centered">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
@@ -229,86 +230,7 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <table style="font-size: 12px; border-collapse: collapse; width: 100%; text-align: center;" border="1">
-          <caption style="font-weight: bold; margin-bottom: 8px;">
-          Results on DFEW. Pre-trained on YouTubeFace. <u>Underlined</u>: second-best. <b>Bold</b>: best result.
-          </caption>
-          <thead>
-            <tr>
-              <th rowspan="2">Method</th>
-              <th colspan="7">Accuracy of Each Emotion (%)</th>
-              <th colspan="2">DFEW</th>
-            </tr>
-            <tr>
-              <th>Happy</th><th>Sad</th><th>Neutral</th><th>Angry</th>
-              <th>Surprise</th><th>Disgust</th><th>Fear</th>
-              <th>UAR</th><th>WAR</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>C3D</td><td>75.17</td><td>39.49</td><td>55.11</td><td>62.49</td><td>45.00</td><td>1.38</td><td>20.51</td><td>42.74</td><td>53.54</td></tr>
-            <tr><td>R(2+1)D-18</td><td>79.67</td><td>39.07</td><td>57.66</td><td>50.39</td><td>48.26</td><td>3.45</td><td>21.06</td><td>42.79</td><td>53.22</td></tr>
-            <tr><td>3DResNet-18</td><td>76.32</td><td>50.21</td><td>64.18</td><td>62.85</td><td>47.52</td><td>0.00</td><td>24.56</td><td>46.52</td><td>58.27</td></tr>
-            <tr><td>ResNet-18+LSTM</td><td>83.56</td><td>61.56</td><td>68.27</td><td>65.29</td><td>51.26</td><td>0.00</td><td>29.34</td><td>51.32</td><td>63.85</td></tr>
-            <tr><td>ResNet-18+ViT</td><td>82.87</td><td>63.83</td><td>65.06</td><td>68.51</td><td>52.00</td><td>0.86</td><td>30.14</td><td>51.68</td><td>64.02</td></tr>
-            <tr><td>EC-STFL</td><td>79.18</td><td>49.05</td><td>57.85</td><td>60.98</td><td>46.15</td><td>2.76</td><td>21.51</td><td>45.35</td><td>56.51</td></tr>
-            <tr><td>Former-DFER</td><td>84.05</td><td>62.57</td><td>67.52</td><td>70.03</td><td>56.43</td><td>3.45</td><td>31.78</td><td>53.69</td><td>65.70</td></tr>
-            <tr><td>CEFLNet</td><td>84.00</td><td>68.00</td><td>67.00</td><td>70.00</td><td>52.00</td><td>0.00</td><td>17.00</td><td>51.14</td><td>65.35</td></tr>
-            <tr><td>STTI</td><td>87.36</td><td>67.90</td><td>64.97</td><td>71.24</td><td>53.10</td><td>3.49</td><td>34.04</td><td>54.58</td><td>66.65</td></tr>
-            <tr><td>NR-DFERNet</td><td>88.47</td><td>64.84</td><td>70.03</td><td>75.09</td><td>61.60</td><td>0.00</td><td>19.43</td><td>54.21</td><td>68.19</td></tr>
-            <tr><td>EST</td><td>86.87</td><td>66.58</td><td>67.18</td><td>71.84</td><td>47.53</td><td>5.52</td><td>28.49</td><td>53.43</td><td>65.85</td></tr>
-            <tr><td>IAL</td><td>87.95</td><td>67.21</td><td>70.10</td><td>76.06</td><td>62.22</td><td>0.00</td><td>36.44</td><td>55.71</td><td>69.24</td></tr>
-            <tr><td>M3DFEL</td><td>89.59</td><td>68.38</td><td>67.88</td><td>74.24</td><td>59.69</td><td>0.00</td><td>31.64</td><td>56.10</td><td>69.25</td></tr>
-            <tr><td>SVFAP</td><td>93.13</td><td>76.98</td><td>72.31</td><td>77.54</td><td><u>65.42</u></td><td><u>15.17</u></td><td><u>39.25</u></td><td>62.83</td><td>74.27</td></tr>
-            <tr><td>A<sup>3</sup>lign-DFER</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td><u>64.09</u></td><td>74.02</td></tr>
-            <tr><td>S2D</td><td><u>93.62</u></td><td><b>80.25</b></td><td><b>77.14</b></td><td><b>81.09</b></td><td>64.53</td><td>1.38</td><td>34.71</td><td>61.82</td><td><u>76.03</u></td></tr>
-            <tr><td><b>STEM-DFER (Ours)</b></td>
-              <td><b>95.09</b></td><td><u>79.25</u></td><td><u>76.75</u></td><td><u>80.16</u></td>
-              <td><b>67.43</b></td><td><b>23.58</b></td><td><b>44.46</b></td><td><b>66.68</b></td><td><b>76.62</b></td></tr>
-          </tbody>
-        </table>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <img id="teaser" src="./static/images/Rec.png" alt="Teaser SVG Image" height="100%">
-        </div>
-        <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Dual-branch frame reconstruction results,Reconstruction results of a
-          YouTubeFace test video under masking ratios of 0.9. We only show 16 frames.
-        </h2>
-
-        <div class="item item-steve">
-          <img id="teaser" src="./static/images/9.png" alt="Teaser SVG Image" height="100%">
-        </div>
-        <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Visualizations of the benchmark model (second row) and the STEM-DFER model
-          (third row) across six emotion categories (from left to right, top to bottom: Happiness,
-          Neutral, Sadness, Anger, Surprise, Fear).
-        </h2>
-      </div>
-    </div>
-  </div>
-</section>
-  
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-          <h2 class="title is-3">Visual Effects</h2>
-          <table border="1" style="border-collapse:collapse; font-size: 12px; text-align: center;">
+        <table border="1" style="border-collapse:collapse; font-size: 12px; text-align: center;">
               <caption><b>Comparison of our method with the state-of-the-art DFER methods on the DFEW and FERV39K datasets.</b><br>
               (<b>bold</b>: Best results , <u>underlined</u>: second-best)</caption>
               <thead>
@@ -359,32 +281,74 @@
                 </tr>
               </tbody>
             </table>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <img id="teaser" src="./static/images/Rec.png" alt="Teaser SVG Image" height="100%">
+        </div>
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Dual-branch frame reconstruction results,Reconstruction results of a
+          YouTubeFace test video under masking ratios of 0.9. We only show 16 frames.
+        </h2>
+
+        <div class="item item-steve">
+          <img id="teaser" src="./static/images/9.png" alt="Teaser SVG Image" height="100%">
+        </div>
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Visualizations of the benchmark model (second row) and the STEM-DFER model
+          (third row) across six emotion categories (from left to right, top to bottom: Happiness,
+          Neutral, Sadness, Anger, Surprise, Fear).
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Visual Effects -->
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <h2 class="title is-3">Visual Effects</h2>
           </div>
         </div>
       </div>
-      <!--/ Visual Effects. -->
     </div>
-    <!--/ Matting. -->
 
-    <!-- Animation. -->
+    <!-- Animation -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
+        <div class="columns is-vcentered">
+          <!-- 左图 -->
+          <div class="column is-half has-text-centered">
             <img src="./static/images/99.png"
                  class="interpolation-image"
-                 alt="Interpolate start reference image."/>
+                 alt="Interpolate start reference image"
+                 style="max-width: 100%; height: auto;" />
           </div>
-          <div class="column is-3 has-text-centered">
+          <!-- 右图 -->
+          <div class="column is-half has-text-centered">
             <img src="./static/images/100.png"
                  class="interpolation-image"
-                 alt="Interpolation end reference image."/>
+                 alt="Interpolate end reference image"
+                 style="max-width: 100%; height: auto;" />
           </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
+      </div>
+    </div>
 
+  </div>
 </section>
 
 
