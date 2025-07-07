@@ -46,12 +46,13 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">STEM-DFER: Video Representation Learning for Facial Expression Recognition Guided by Dual-Branch Modeling and Task-Specific Adaptation</h1>
+          <h2 class="title is-1 publication-title">STEM-DFER: Video Representation Learning for Facial Expression Recognition Guided by Dual-Branch Modeling and Task-Specific Adaptation</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://gd.bistu.edu.cn/yjspy/dsfc/yqkxyjsxk/a5449500931640029ba2d0effaf01f0d.htm">Mingxin~Yu</a><sup>1</sup>,</span>
             <span class="author-block">
                <a href="">Zichuan~Yan</a><sup>1</sup>,</span>
+            <span class="author-block">
               <a href="">Ning~Li</a><sup>2,3</sup>,</span>
             <span class="author-block">
               <a href="">Yiyuan~Ge</a><sup>5<br></sup>,
@@ -138,7 +139,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img id="teaser" src="./static/images/aa.svg" alt="Teaser SVG Image" height="100%">
+      <img id="teaser" src="./static/images/ss.svg" alt="Teaser SVG Image" height="100%">
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Overview of the proposed STEM-DFER framework, 
           which consists of two stages: the self-supervised pretraining stage 
@@ -177,8 +178,29 @@
           <p>
             We propose STEM-DFER, a self-supervised framework for dynamic facial expression recognition (DFER).
             It reduces spatiotemporal redundancy via dual-branch reconstruction and improves generalization with 
-            a lightweight expert module that updates only task-relevant parameters. STEM-DFER achieves state-of-the-art
-            performance on DFEW, FERV39k, CMU-MOSEI, and RAVDESS, demonstrating its effectiveness and efficiency. 
+            a lightweight expert module that updates only task-relevant parameters. 
+          </p>
+          During pretraining, STEM‑DFER employs a dual‑branch reconstruction task with a high masking ratio: a 
+          spatial branch restores local detail, and a temporal branch captures motion dynamics, thereby reducing
+          spatiotemporal redundancy and strengthening sequence modeling. 
+           <p>
+             In fine‑tuning, we integrate the Dynamic Expression Expert Module (DEEM), which uses a learnable gating
+             mechanism to activate a small subset of expert subnetworks, updating only task‑relevant parameters. This
+             strategy substantially lowers computational costs and mitigates catastrophic forgetting.
+           </p>
+          <p>
+            On DFEW and FERV39k, STEM‑DFER yields unweighted average recall gains of 2.72% and 0.68%, respectively, 
+            and achieves classification accuracies of 80.73% on CMU‑MOSEI and 83.61% on RAVDESS. These results demonstrate
+            that STEM‑DFER not only enhances DFER performance and robustness but also provides a versatile paradigm for spatiotemporal
+            feature learning. Our code is available at <a href="https://github.com/yanzichuan/STEM-DFER"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>. 
+          </p>
+          <p>
           </p>
         </div>
       </div>
@@ -264,68 +286,6 @@
   </div>
 </section>
 
-  <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <table border="1" style="border-collapse:collapse; font-size: 12px; text-align: center;">
-            <caption><b>Comparison of our method with the state-of-the-art DFER methods on the DFEW and FERV39K datasets.</b><br>
-            (<b>bold</b>: Best results , <u>underlined</u>: second-best)</caption>
-            <thead>
-              <tr>
-                <th>Method</th>
-                <th colspan="2">DFEW [19]</th>
-                <th colspan="2">FERV39K [28]</th>
-                <th>M</th>
-                <th>Res.</th>
-              </tr>
-              <tr>
-                <th></th>
-                <th>UAR (%)</th>
-                <th>WAR (%)</th>
-                <th>UAR (%)</th>
-                <th>WAR (%)</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>C3D [50]</td><td>42.74</td><td>53.54</td><td>22.68</td><td>31.69</td><td>V</td><td>112</td></tr>
-              <tr><td>R(2+1)D-18 [51]</td><td>42.79</td><td>53.22</td><td>26.67</td><td>41.28</td><td>V</td><td>112</td></tr>
-              <tr><td>3DResNet-18 [30]</td><td>46.52</td><td>58.27</td><td>31.55</td><td>37.57</td><td>V</td><td>112</td></tr>
-              <tr><td>ResNet-18+LSTM [16]</td><td>51.32</td><td>63.85</td><td>30.92</td><td>42.95</td><td>V</td><td>224</td></tr>
-              <tr><td>ResNet-18+ViT [16]</td><td>55.76</td><td>66.56</td><td>38.35</td><td>48.43</td><td>V</td><td>224</td></tr>
-              <tr><td>EC-STFL [19]</td><td>45.35</td><td>56.51</td><td>/</td><td>/</td><td>V</td><td>112</td></tr>
-              <tr><td>Former-DFER [69]</td><td>53.69</td><td>65.7</td><td>37.2</td><td>46.85</td><td>V</td><td>112</td></tr>
-              <tr><td>CEFLNet [35]</td><td>51.14</td><td>65.35</td><td>/</td><td>/</td><td>V</td><td>224</td></tr>
-              <tr><td>STTI [17]</td><td>54.58</td><td>66.65</td><td>37.76</td><td>48.11</td><td>V</td><td>112</td></tr>
-              <tr><td>NR-DFERNet [52]</td><td>54.21</td><td>68.19</td><td>33.99</td><td>45.97</td><td>V</td><td>112</td></tr>
-              <tr><td>IAL [53]</td><td>55.71</td><td>69.24</td><td>35.82</td><td>48.54</td><td>V</td><td>112</td></tr>
-              <tr><td>EST [15]</td><td>53.43</td><td>65.85</td><td>/</td><td>/</td><td>V</td><td>224</td></tr>
-              <tr><td>HICMAE [57]</td><td>63.76</td><td>75.01</td><td><u>42.65</u></td><td><b>56.17</b></td><td>AV</td><td>160</td></tr>
-              <tr><td>M3DFEL [54]</td><td>56.1</td><td>69.25</td><td>35.94</td><td>47.67</td><td>V</td><td>-</td></tr>
-              <tr><td>SVFAP [55]</td><td>62.83</td><td>74.27</td><td>41.19</td><td><u>54.28</u></td><td>V</td><td>160</td></tr>
-              <tr><td>DFER-CLIP [37]</td><td>59.61</td><td>71.25</td><td>41.27</td><td>52.55</td><td>LV</td><td>224</td></tr>
-              <tr><td>A<sup>3</sup>lign-DFER [36]</td><td><u>64.09</u></td><td>74.2</td><td>41.87</td><td>51.77</td><td>LV</td><td>112</td></tr>
-              <tr><td>S2DI [56]</td><td>61.82</td><td><u>76.03</u></td><td>41.28</td><td>52.56</td><td>V</td><td>160</td></tr>
-              <tr>
-                <td><b>STEM-DFER (Ours)</b></td>
-                <td><b>66.81</b></td>
-                <td><b>76.98</b></td>
-                <td><b>43.33</b></td>
-                <td>53.35</td>
-                <td>V</td>
-                <td>224</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -350,14 +310,58 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+          <table border="1" style="border-collapse:collapse; font-size: 12px; text-align: center;">
+              <caption><b>Comparison of our method with the state-of-the-art DFER methods on the DFEW and FERV39K datasets.</b><br>
+              (<b>bold</b>: Best results , <u>underlined</u>: second-best)</caption>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="2">DFEW [19]</th>
+                  <th colspan="2">FERV39K [28]</th>
+                  <th>M</th>
+                  <th>Res.</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>UAR (%)</th>
+                  <th>WAR (%)</th>
+                  <th>UAR (%)</th>
+                  <th>WAR (%)</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>C3D [50]</td><td>42.74</td><td>53.54</td><td>22.68</td><td>31.69</td><td>V</td><td>112</td></tr>
+                <tr><td>R(2+1)D-18 [51]</td><td>42.79</td><td>53.22</td><td>26.67</td><td>41.28</td><td>V</td><td>112</td></tr>
+                <tr><td>3DResNet-18 [30]</td><td>46.52</td><td>58.27</td><td>31.55</td><td>37.57</td><td>V</td><td>112</td></tr>
+                <tr><td>ResNet-18+LSTM [16]</td><td>51.32</td><td>63.85</td><td>30.92</td><td>42.95</td><td>V</td><td>224</td></tr>
+                <tr><td>ResNet-18+ViT [16]</td><td>55.76</td><td>66.56</td><td>38.35</td><td>48.43</td><td>V</td><td>224</td></tr>
+                <tr><td>EC-STFL [19]</td><td>45.35</td><td>56.51</td><td>/</td><td>/</td><td>V</td><td>112</td></tr>
+                <tr><td>Former-DFER [69]</td><td>53.69</td><td>65.7</td><td>37.2</td><td>46.85</td><td>V</td><td>112</td></tr>
+                <tr><td>CEFLNet [35]</td><td>51.14</td><td>65.35</td><td>/</td><td>/</td><td>V</td><td>224</td></tr>
+                <tr><td>STTI [17]</td><td>54.58</td><td>66.65</td><td>37.76</td><td>48.11</td><td>V</td><td>112</td></tr>
+                <tr><td>NR-DFERNet [52]</td><td>54.21</td><td>68.19</td><td>33.99</td><td>45.97</td><td>V</td><td>112</td></tr>
+                <tr><td>IAL [53]</td><td>55.71</td><td>69.24</td><td>35.82</td><td>48.54</td><td>V</td><td>112</td></tr>
+                <tr><td>EST [15]</td><td>53.43</td><td>65.85</td><td>/</td><td>/</td><td>V</td><td>224</td></tr>
+                <tr><td>HICMAE [57]</td><td>63.76</td><td>75.01</td><td><u>42.65</u></td><td><b>56.17</b></td><td>AV</td><td>160</td></tr>
+                <tr><td>M3DFEL [54]</td><td>56.1</td><td>69.25</td><td>35.94</td><td>47.67</td><td>V</td><td>-</td></tr>
+                <tr><td>SVFAP [55]</td><td>62.83</td><td>74.27</td><td>41.19</td><td><u>54.28</u></td><td>V</td><td>160</td></tr>
+                <tr><td>DFER-CLIP [37]</td><td>59.61</td><td>71.25</td><td>41.27</td><td>52.55</td><td>LV</td><td>224</td></tr>
+                <tr><td>A<sup>3</sup>lign-DFER [36]</td><td><u>64.09</u></td><td>74.2</td><td>41.87</td><td>51.77</td><td>LV</td><td>112</td></tr>
+                <tr><td>S2DI [56]</td><td>61.82</td><td><u>76.03</u></td><td>41.28</td><td>52.56</td><td>V</td><td>160</td></tr>
+                <tr>
+                  <td><b>STEM-DFER (Ours)</b></td>
+                  <td><b>66.81</b></td>
+                  <td><b>76.98</b></td>
+                  <td><b>43.33</b></td>
+                  <td>53.35</td>
+                  <td>V</td>
+                  <td>224</td>
+                </tr>
+              </tbody>
+            </table>
+
         </div>
       </div>
       <!--/ Visual Effects. -->
