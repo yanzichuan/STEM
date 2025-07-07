@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>STEM-DFER: Video Representation Learning for Facial Expression Recognition Guided by Dual-Branch Modeling and Task-Specific Adaptation</title>
+  <title>STEM-DFER</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -41,54 +41,12 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">STEM-DFER: Video Representation Learning for Facial Expression Recognition Guided by Dual-Branch Modeling and Task-Specific Adaptation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://gd.bistu.edu.cn/yjspy/dsfc/yqkxyjsxk/a5449500931640029ba2d0effaf01f0d.htm">Mingxin~Yu</a><sup>1</sup>,</span>
@@ -96,7 +54,7 @@
                <a href="">Zichuan~Yan</a><sup>1</sup>,</span>
               <a href="">Ning~Li</a><sup>2,3</sup>,</span>
             <span class="author-block">
-              <a href="">Yiyuan~Ge</a><sup>5</sup>,
+              <a href="">Yiyuan~Ge</a><sup>5<br></sup>,
             </span>
             <span class="author-block">
               <a href="">Eryang~Gao</a><sup>2,3</sup>,
@@ -110,12 +68,12 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Optoelectronic Measurement Technology and Instrument, Beijing Information Science and Technology University,</span>
-            <span class="author-block"><sup>2</sup>China Institute of Marine Technology and Economy</span>
-            <span class="author-block"><sup>3</sup>National Key Laboratory of Human Factors Engineering</span>
-            <span class="author-block"><sup>4</sup>Fujian Normal University</span>
-            <span class="author-block"><sup>5</sup>South China University of Technology</span>
-            <span class="author-block"><sup>6</sup>Sichuan University</span>
+            <span class="author-block"><sup>1</sup>Beijing Information Science and Technology Universit<br></span>
+            <span class="author-block"><sup>2</sup>China Institute of Marine Technology and Economy<br></span>
+            <span class="author-block"><sup>3</sup>National Key Laboratory of Human Factors Engineering<br></span>
+            <span class="author-block"><sup>4</sup>Fujian Normal University<br></span>
+            <span class="author-block"><sup>5</sup>South China University of Technology<br></span>
+            <span class="author-block"><sup>6</sup>Sichuan University<br></span>
           </div>
 
           <div class="column has-text-centered">
@@ -180,14 +138,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img id="teaser" src="./static/images/aa.svg" alt="Teaser SVG Image" height="100%">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">Overview of the proposed STEM-DFER framework, 
+          which consists of two stages: the self-supervised pretraining stage 
+          (a) and the downstream task fine-tuning stage (b).
       </h2>
     </div>
   </div>
@@ -199,53 +154,13 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
+          <img id="teaser" src="./static/images/bb.svg" alt="Teaser SVG Image" height="100%">
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf">The STEM-DFER framework is divided into two stages:
+          dual-branch reconstruction self-supervised pretraining (Stage 1) 
+          and joint expression dynamic expert module fine-tuning (Stage 2). 
+      </h2>
       </div>
     </div>
   </div>
@@ -260,31 +175,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We propose STEM-DFER, a self-supervised framework for dynamic facial expression recognition (DFER).
+            It reduces spatiotemporal redundancy via dual-branch reconstruction and improves generalization with 
+            a lightweight expert module that updates only task-relevant parameters. STEM-DFER achieves state-of-the-art
+            performance on DFEW, FERV39k, CMU-MOSEI, and RAVDESS, demonstrating its effectiveness and efficiency. 
           </p>
         </div>
       </div>
@@ -305,7 +199,148 @@
   </div>
 </section>
 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <img id="teaser" src="./static/images/cc.svg" alt="Teaser SVG Image" height="100%">
+        </div>
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Illustration of the proposed Dynamic Expression Expert Module (DEEM).
+          During the fine-tuning phase, this module is integrated into the Vision Transformer 
+          (ViT) layer to form the DEEM layer.
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <table style="font-size: 12px; border-collapse: collapse; width: 100%; text-align: center;" border="1">
+          <caption style="font-weight: bold; margin-bottom: 8px;">
+          Results on DFEW. Pre-trained on YouTubeFace. <u>Underlined</u>: second-best. <b>Bold</b>: best result.
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="2">Method</th>
+              <th colspan="7">Accuracy of Each Emotion (%)</th>
+              <th colspan="2">DFEW</th>
+            </tr>
+            <tr>
+              <th>Happy</th><th>Sad</th><th>Neutral</th><th>Angry</th>
+              <th>Surprise</th><th>Disgust</th><th>Fear</th>
+              <th>UAR</th><th>WAR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>C3D</td><td>75.17</td><td>39.49</td><td>55.11</td><td>62.49</td><td>45.00</td><td>1.38</td><td>20.51</td><td>42.74</td><td>53.54</td></tr>
+            <tr><td>R(2+1)D-18</td><td>79.67</td><td>39.07</td><td>57.66</td><td>50.39</td><td>48.26</td><td>3.45</td><td>21.06</td><td>42.79</td><td>53.22</td></tr>
+            <tr><td>3DResNet-18</td><td>76.32</td><td>50.21</td><td>64.18</td><td>62.85</td><td>47.52</td><td>0.00</td><td>24.56</td><td>46.52</td><td>58.27</td></tr>
+            <tr><td>ResNet-18+LSTM</td><td>83.56</td><td>61.56</td><td>68.27</td><td>65.29</td><td>51.26</td><td>0.00</td><td>29.34</td><td>51.32</td><td>63.85</td></tr>
+            <tr><td>ResNet-18+ViT</td><td>82.87</td><td>63.83</td><td>65.06</td><td>68.51</td><td>52.00</td><td>0.86</td><td>30.14</td><td>51.68</td><td>64.02</td></tr>
+            <tr><td>EC-STFL</td><td>79.18</td><td>49.05</td><td>57.85</td><td>60.98</td><td>46.15</td><td>2.76</td><td>21.51</td><td>45.35</td><td>56.51</td></tr>
+            <tr><td>Former-DFER</td><td>84.05</td><td>62.57</td><td>67.52</td><td>70.03</td><td>56.43</td><td>3.45</td><td>31.78</td><td>53.69</td><td>65.70</td></tr>
+            <tr><td>CEFLNet</td><td>84.00</td><td>68.00</td><td>67.00</td><td>70.00</td><td>52.00</td><td>0.00</td><td>17.00</td><td>51.14</td><td>65.35</td></tr>
+            <tr><td>STTI</td><td>87.36</td><td>67.90</td><td>64.97</td><td>71.24</td><td>53.10</td><td>3.49</td><td>34.04</td><td>54.58</td><td>66.65</td></tr>
+            <tr><td>NR-DFERNet</td><td>88.47</td><td>64.84</td><td>70.03</td><td>75.09</td><td>61.60</td><td>0.00</td><td>19.43</td><td>54.21</td><td>68.19</td></tr>
+            <tr><td>EST</td><td>86.87</td><td>66.58</td><td>67.18</td><td>71.84</td><td>47.53</td><td>5.52</td><td>28.49</td><td>53.43</td><td>65.85</td></tr>
+            <tr><td>IAL</td><td>87.95</td><td>67.21</td><td>70.10</td><td>76.06</td><td>62.22</td><td>0.00</td><td>36.44</td><td>55.71</td><td>69.24</td></tr>
+            <tr><td>M3DFEL</td><td>89.59</td><td>68.38</td><td>67.88</td><td>74.24</td><td>59.69</td><td>0.00</td><td>31.64</td><td>56.10</td><td>69.25</td></tr>
+            <tr><td>SVFAP</td><td>93.13</td><td>76.98</td><td>72.31</td><td>77.54</td><td><u>65.42</u></td><td><u>15.17</u></td><td><u>39.25</u></td><td>62.83</td><td>74.27</td></tr>
+            <tr><td>A<sup>3</sup>lign-DFER</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td><u>64.09</u></td><td>74.02</td></tr>
+            <tr><td>S2D</td><td><u>93.62</u></td><td><b>80.25</b></td><td><b>77.14</b></td><td><b>81.09</b></td><td>64.53</td><td>1.38</td><td>34.71</td><td>61.82</td><td><u>76.03</u></td></tr>
+            <tr><td><b>STEM-DFER (Ours)</b></td>
+              <td><b>95.09</b></td><td><u>79.25</u></td><td><u>76.75</u></td><td><u>80.16</u></td>
+              <td><b>67.43</b></td><td><b>23.58</b></td><td><b>44.46</b></td><td><b>66.68</b></td><td><b>76.62</b></td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <table border="1" style="border-collapse:collapse; font-size: 12px; text-align: center;">
+            <caption><b>Comparison of our method with the state-of-the-art DFER methods on the DFEW and FERV39K datasets.</b><br>
+            (<b>bold</b>: Best results , <u>underlined</u>: second-best)</caption>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th colspan="2">DFEW [19]</th>
+                <th colspan="2">FERV39K [28]</th>
+                <th>M</th>
+                <th>Res.</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>UAR (%)</th>
+                <th>WAR (%)</th>
+                <th>UAR (%)</th>
+                <th>WAR (%)</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>C3D [50]</td><td>42.74</td><td>53.54</td><td>22.68</td><td>31.69</td><td>V</td><td>112</td></tr>
+              <tr><td>R(2+1)D-18 [51]</td><td>42.79</td><td>53.22</td><td>26.67</td><td>41.28</td><td>V</td><td>112</td></tr>
+              <tr><td>3DResNet-18 [30]</td><td>46.52</td><td>58.27</td><td>31.55</td><td>37.57</td><td>V</td><td>112</td></tr>
+              <tr><td>ResNet-18+LSTM [16]</td><td>51.32</td><td>63.85</td><td>30.92</td><td>42.95</td><td>V</td><td>224</td></tr>
+              <tr><td>ResNet-18+ViT [16]</td><td>55.76</td><td>66.56</td><td>38.35</td><td>48.43</td><td>V</td><td>224</td></tr>
+              <tr><td>EC-STFL [19]</td><td>45.35</td><td>56.51</td><td>/</td><td>/</td><td>V</td><td>112</td></tr>
+              <tr><td>Former-DFER [69]</td><td>53.69</td><td>65.7</td><td>37.2</td><td>46.85</td><td>V</td><td>112</td></tr>
+              <tr><td>CEFLNet [35]</td><td>51.14</td><td>65.35</td><td>/</td><td>/</td><td>V</td><td>224</td></tr>
+              <tr><td>STTI [17]</td><td>54.58</td><td>66.65</td><td>37.76</td><td>48.11</td><td>V</td><td>112</td></tr>
+              <tr><td>NR-DFERNet [52]</td><td>54.21</td><td>68.19</td><td>33.99</td><td>45.97</td><td>V</td><td>112</td></tr>
+              <tr><td>IAL [53]</td><td>55.71</td><td>69.24</td><td>35.82</td><td>48.54</td><td>V</td><td>112</td></tr>
+              <tr><td>EST [15]</td><td>53.43</td><td>65.85</td><td>/</td><td>/</td><td>V</td><td>224</td></tr>
+              <tr><td>HICMAE [57]</td><td>63.76</td><td>75.01</td><td><u>42.65</u></td><td><b>56.17</b></td><td>AV</td><td>160</td></tr>
+              <tr><td>M3DFEL [54]</td><td>56.1</td><td>69.25</td><td>35.94</td><td>47.67</td><td>V</td><td>-</td></tr>
+              <tr><td>SVFAP [55]</td><td>62.83</td><td>74.27</td><td>41.19</td><td><u>54.28</u></td><td>V</td><td>160</td></tr>
+              <tr><td>DFER-CLIP [37]</td><td>59.61</td><td>71.25</td><td>41.27</td><td>52.55</td><td>LV</td><td>224</td></tr>
+              <tr><td>A<sup>3</sup>lign-DFER [36]</td><td><u>64.09</u></td><td>74.2</td><td>41.87</td><td>51.77</td><td>LV</td><td>112</td></tr>
+              <tr><td>S2DI [56]</td><td>61.82</td><td><u>76.03</u></td><td>41.28</td><td>52.56</td><td>V</td><td>160</td></tr>
+              <tr>
+                <td><b>STEM-DFER (Ours)</b></td>
+                <td><b>66.81</b></td>
+                <td><b>76.98</b></td>
+                <td><b>43.33</b></td>
+                <td>53.35</td>
+                <td>V</td>
+                <td>224</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <img id="teaser" src="./static/images/ff.svg" alt="Teaser SVG Image" height="100%">
+        </div>
+        <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Embedding space visualization using t-SNE.
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -386,74 +421,8 @@
         <br/>
         <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
 </section>
 
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-  </div>
-</section>
 
 
 <footer class="footer">
